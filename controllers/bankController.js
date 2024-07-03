@@ -88,7 +88,3 @@ async function fetchMakeByKBankTransactions() {
         return []; // Return empty array or handle error as needed
     }
 }
-
-module.exports = {
-    getAllTransactions
-};
