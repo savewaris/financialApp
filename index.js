@@ -1,19 +1,26 @@
 const express = require('express');
-const path = require('path');
 const app = express();
 const port = process.env.PORT || 3000;
 const bankRoutes = require('./routes/bankRoutes');
 
-// Serve static files from the public directory
-app.use(express.static(path.join(__dirname, 'public')));
-
+// Middleware
 app.use(express.json());
+
+// Routes
 app.use('/api', bankRoutes);
 
+// Root route
 app.get('/', (req, res) => {
-    res.send('Financial Management and Tracking Service');
+    res.send('Welcome to Financial Management and Tracking Service');
 });
 
+// Error handling middleware
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Something went wrong!');
+});
+
+// Start server
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
 });

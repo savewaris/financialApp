@@ -9,18 +9,18 @@ services:
       - key: PORT
         value: 3000
       - key: BANGKOK_BANK_API_URL
-        value: https://api.bangkokbank.com/transactions
+        value: ${BANGKOK_BANK_API_URL}
       - key: BANGKOK_BANK_API_TOKEN
-        value: 9bceac5a32e640bcb78bfaf5edc61ff1
+        value: ${BANGKOK_BANK_API_TOKEN}
       - key: SCB_EASY_API_URL
-        value: https://api.scb.co.th/transactions
+        value: ${SCB_EASY_API_URL}
       - key: SCB_EASY_API_TOKEN
-        value: l782b452c1d85240edbb1a18da225bef7c
+        value: ${SCB_EASY_API_TOKEN}
       - key: KPLUS_API_URL
-        value: https://api.kasikornbank.com/kplus/transactions
+        value: ${KPLUS_API_URL}
       - key: KPLUS_API_TOKEN
-        value: D1Y4GVCEaf38AYz2cDbD6dwclFm5U051
+        value: ${KPLUS_API_TOKEN}
       - key: MAKE_BY_KBANK_API_URL
-        value: https://api.kasikornbank.com/make/transactions
+        value: ${MAKE_BY_KBANK_API_URL}
       - key: MAKE_BY_KBANK_API_TOKEN
-        value: D1Y4GVCEaf38AYz2cDbD6dwclFm5U051
+        value: ${MAKE_BY_KBANK_API_TOKEN}
